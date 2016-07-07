@@ -100,7 +100,7 @@ If you want to compare treated VS untreated please enter treated samples before 
 
     ./script/pipeline_differential_analysis.bash -c CONFIG -l INPUT_LIST -b BAM_RNA_FILES -s STEP -n SAMPLE_TO_COMBINE -g SAMPLE_GROUP -o OUTPUT_DIR
 
-
+------------------+-------------------------------------------------------------------+
 **VARIABLE NAME** | **CONTENT**
 ----------------- | ------------------------------------------------------------------+
 | -c   | The TXT format configuration file
