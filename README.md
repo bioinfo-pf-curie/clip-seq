@@ -56,7 +56,8 @@ To treat reads with adapter, it is necessary to know side adapters 5' (P5) and 3
 
 ## How to use it ?
 
-* PART 1 : reads processing *
+* PART 1 : reads processing
+
 CLIP-seq can be used for a single sample. In order to use the pipeline, please set up the configuration according to your analysis, and run the following command to do the preprocessing data:
 
     /script/pipeline_clip-seq.bash -c CONFIG -i INPUT_FILE -s STEP -n SAMPLE_NUMBER -o OUTPUT_DIR
@@ -92,7 +93,8 @@ annotation\_peaks\_extended   | Annotate peaks present in all gene and the downs
 all                           | Launch all previous step
 
 
-* PART 2 : differential analysis *
+* PART 2 : differential analysis
+
 If you want to compare treated VS untreated please enter treated samples before untreated samples (for RNA-seq, CLIP-seq and group) Run the following command to do the differential analysis:
 
 
@@ -102,8 +104,9 @@ If you want to compare treated VS untreated please enter treated samples before 
 **VARIABLE NAME** | **CONTENT**
 ----------------- | -----------
 -c   | The TXT format configuration file
--l   | The TXT format file of BED files, obtained from the previous script:  id_CLIP_sample<TAB>path_of_bed_file<TAB>condition_of_this_sample
-       condition_of_this_sample is the condition of the sample (e.g: Untreated, treated ...) CAUTION: Condition must be write with letters (no number or symbol)
+-l   | The TXT format file of BED files, obtained from the previous script:  
+    id_CLIP_sample<TAB>path_of_bed_file<TAB>condition_of_this_sample  
+condition_of_this_sample is the condition of the sample (e.g: Untreated, treated ...) CAUTION: Condition must be write with letters (no number or symbol)
 -b   | The TXT format file of BAM file sorted of RNA-seq samples
        id_CLIP_sample<TAB>path_of_bam_file<TAB>condition_of_this_sample
 -s   | The steps of this pipeline that is to be launched
