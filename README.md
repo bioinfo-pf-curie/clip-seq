@@ -4,7 +4,7 @@ See NEWS for information about changes in this and previous versions.
 
 ## What is the CLIP-seq pipeline ?
 
-CLIP-seq was set up to process CLIP sequencing data from aligned sequencing reads. It is a pipeline including two parts: <br /> * the reads processing (cleaning, mapping, peak calling and annotation of peaks) <br /> * the differential analysis. <br /> The normalization step in the differential analysis can be defined as the normalization of the number of reads in a peak (in CLIP-seq samples) by the number of reads in the gene (in RNA-seq sample) where the peak is located on the gene.
+CLIP-seq was set up to process CLIP sequencing data from aligned sequencing reads. It is a pipeline including two parts: <br /> -- the reads processing (cleaning, mapping, peak calling and annotation of peaks) <br /> -- the differential analysis. <br /> The normalization step in the differential analysis can be defined as the normalization of the number of reads in a peak (in CLIP-seq samples) by the number of reads in the gene (in RNA-seq sample) where the peak is located on the gene.
 
 ## Contact
 
