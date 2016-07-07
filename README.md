@@ -104,8 +104,8 @@ If you want to compare treated VS untreated please enter treated samples before 
 **VARIABLE NAME** | **CONTENT**
 ----------------- | -----------
 -c   | The TXT format configuration file
--l   | The TXT format file of BED files, obtained from the previous script:  
-     |    id_CLIP_sample<TAB>path_of_bed_file<TAB>condition_of_this_sample  
+-l   | The TXT format file of BED files, obtained from the previous script:
+     |    id_CLIP_sample<TAB>path_of_bed_file<TAB>condition_of_this_sample
      | condition_of_this_sample is the condition of the sample (e.g: Untreated, treated ...) CAUTION: Condition must be write with letters (no number or symbol)
 -b   | The TXT format file of BAM file sorted of RNA-seq samples
      |    id_CLIP_sample<TAB>path_of_bam_file<TAB>condition_of_this_sample
