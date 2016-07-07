@@ -106,7 +106,7 @@ If you want to compare treated VS untreated please enter treated samples before 
  -l   | The TXT format file of BED files, obtained from the previous script: id\_CLIP\_sample<TAB>path\_of\_bed\_file<TAB>condition\_of\_this\_sample
       | condition\_of\_this\_sample is the condition of the sample (e.g: Untreated, treated ...) CAUTION: Condition must be write with letters (no number or symbol)
  -b   | The TXT format file of BAM file sorted of RNA-seq samples
-      | id\_CLIP\_sample<TAB>path\_of\_bam\_file<TAB>condition\_of\_this\_sample
+      | id\_CLIP\_sample\<TAB\>path\_of\_bam\_file\<TAB\>condition\_of\_this\_sample
  -s   | The steps of this pipeline that is to be launched
  -n   | The identifier of CLIP-seq samples (numbers) separated by comma
  -g   | The identifier of sample condition separated by comma (0 for untreated sample and 1 for treated sample)
