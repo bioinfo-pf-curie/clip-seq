@@ -1,0 +1,4 @@
+Sample2	/PATH/SAMPLE2/SAMPLE2_intersectBED_500_bp_DownstreamEnd.bed	treated	1
+Sample4	/PATH/SAMPLE4/SAMPLE4_intersectBED_500_bp_DownstreamEnd.bed	treated	1
+Sample1	/PATH/SAMPLE1/SAMPLE1_intersectBED_500_bp_DownstreamEnd.bed	untreated	0
+Sample3	/PATH/SAMPLE3/SAMPLE3_intersectBED_500_bp_DownstreamEnd.bed	untreated	0

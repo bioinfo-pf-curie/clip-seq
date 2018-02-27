@@ -1,0 +1,4 @@
+Sample2	/PATH/BAM_RNA-seq_FILE/SAMPLE2_MAPQ_sort.bam	treated
+Sample4	/PATH/BAM_RNA-seq_FILE/SAMPLE4_MAPQ_sort.bam	treated
+Sample1	/PATH/BAM_RNA-seq_FILE/SAMPLE1_MAPQ_sort.bam	untreated
+Sample3	/PATH/BAM_RNA-seq_FILE/SAMPLE3_MAPQ_sort.bam	untreated
