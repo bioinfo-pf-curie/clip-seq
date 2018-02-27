@@ -131,13 +131,13 @@ do
 
 ## For this step, we merge all peaks of CLIP-seq to create common peaks between all files
 # bedtools version 2.21.0
-    name=`echo $COMB | tr "," " "`
+    name=`echo ${COMBINE_SAMPLE} | tr "," " "`
     if [[ ${NAME_STEP} == "merge_peaks" || ${NAME_STEP} == "all" ]]; then
 	echo "Concatenate peak files ..."
 	if [ -e ${OUTPUT_ALL}/all_peaks.bed ]; then
 	    rm ${OUTPUT_ALL}/all_peaks.bed
 	fi
-	for i in `echo $COMB | tr "," " "`
+	for i in `echo ${COMBINE_SAMPLE} | tr "," " "`
 	do
 	    fn=${SAMPLES["${i}"]}
 	    input="${fn}"
@@ -160,10 +160,10 @@ do
 #########################################
 ###  Creation of the table of counts  ###
 #########################################
-    name=`echo $COMB | tr "," "\t"`
+    name=`echo ${COMBINE_SAMPLE} | tr "," "\t"`
     if [[ ${NAME_STEP} == "toc_peaks" || ${NAME_STEP} == "all" ]]; then
 	echo "Creation table of counts with CLIP-seq data..."
-	for i in `echo ${COMB} | tr "," " "`
+	for i in `echo ${COMBINE_SAMPLE} | tr "," " "`
 	do
 	    fn=${SAMPLES["${i}"]}
 	    dname=`basename ${fn} | sed -e 's/_intersectBED.*/_MAPQ_rm_duplicated_reads.bam/'`
@@ -221,7 +221,7 @@ do
 	if [ -e ${OUTPUT_ALL}/all_files.bed ]; then
 	    rm ${OUTPUT_ALL}/all_files.bed
 	fi
-	for i in `echo $COMB | tr "," " "`
+	for i in `echo ${COMBINE_SAMPLE} | tr "," " "`
 	do
 	    cat ${OUTPUT_ALL}/merged_peaks_finallist_IanDif.bed ${OUTPUT_ALL}/whole_gene_finallist_IanDif.bed > ${OUTPUT_ALL}/all_files.bed
 	done
