@@ -1,0 +1,70 @@
+## Config file for CLIP-seq pipeline
+
+############
+##  PATH  ##
+############
+SAMTOOLS_PATH=/bioinfo/local/build/Centos/samtools/samtools-1.3/bin
+BEDTOOLS_PATH=/bioinfo/local/build/Centos/bedtools/bedtools-2.25.0/bin
+R_PATH=/bioinfo/local/build/Centos/R/R-3.4.0/bin
+PYTHON_PATH=/bioinfo/local/build/Centos/python/python-2.7.12/bin
+AWK_PATH=/usr/bin
+CUTADAPT_PATH=/bioinfo/local/build/Centos/python/python-2.7.12/bin
+TOPHAT_PATH=/bioinfo/users/mcadix/miniconda3/envs/python27/bin
+JAVA_PATH=/bioinfo/local/build/Centos/java/jdk1.7.0_45/bin
+PICARD_TOOLS=/bioinfo/local/build/Centos/picard/1.97
+PIRANHA_PATH=/bioinfo/local/build/piranha/piranha-1.2.1/bin
+
+###########
+##  DIR  ##
+###########
+SCRIPTS=/bioinfo/users/mcadix/myGitLab/clip-seq/scripts
+ANNOTATION_DIR=/bioinfo/users/mcadix/myGitLab/clip-seq/annotation
+
+
+##################
+##  ANNOTATION  ##
+##################
+BUILD_ANNOT=0
+ORG=hg19
+UCSC_EXPORT=refseq_export_hg19.csv
+WINDOW_SIZE=500
+
+
+################
+##  TRIMMING  ##
+################
+ADAPTER5="GTTCAGAGTTCTACAGTCCGACGATC"
+ADAPTER3="TGGAATTCTCGGGTGCCAAGG"
+MIN_LENGTH_READS=19
+
+
+###############
+##  MAPPING  ##
+###############
+BOWTIE_INDEX=/data/annotations/Human/hg19/bowtie2_indexes/base/hg19
+MAX_MULTIHITS=1
+READ_MISMATCHES=2
+GTF_FILE=/data/annotations/Human/hg19/hg19refGene.gtf
+TRANSCRIPTOME_MAX_HITS=1
+
+
+###############################
+##  REMOVE DUPLICATED READS  ##
+###############################
+REMOVE_DUPLICATES=1
+
+
+######################
+##  PEAK DETECTION  ##
+######################
+MIN_MAPQ=20
+BIN_SIZE=50
+BACKGROUND_THRESHOLD=0.95
+
+
+#############################
+##  DIFFERENTIAL ANALYSIS  ##
+#############################
+MIN_COUNT_PER_COND=10
+
+
