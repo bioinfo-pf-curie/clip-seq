@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-###########################################################
+###########################################################################
 #Mandy Cadix
 #
 #usage: selectFile.py [-h] -input <INPUT_FILE> -output <OUTPUT_FILE> 
@@ -15,7 +15,7 @@
 #  -output <OUTPUT_FILE>, --outputFile <OUTPUT_FILE>
 #                        Output file (path/to/file/nameFile.fastq).
 #
-###########################################################
+###########################################################################
 
 
 import argparse
@@ -37,29 +37,26 @@ if __name__ == '__main__':
 	inputFile = gzip.open(dargs["inputFile"],"rb")
 	outputFile = open(dargs["outputFile"],"w")
 
-#	input_file=gzip.open(input_file,'rb')
-#	output_file = open(output_file, 'w')
 
+	flag = 0
+	y_counter = 0
+	n_counter = 0
 
-flag = 0
-y_counter = 0
-n_counter = 0
+	for line in inputFile:	
 
-for line in inputFile:	
+		if (" " in line) and (":N:" in line):
+			flag = 1
+			n_counter += 1
 
-	if (" " in line) and (":N:" in line):
-		flag = 1
-		n_counter += 1
+		if (" " in line) and (":Y:" in line):
+			flag = 0
+			y_counter += 1
 
-	if (" " in line) and (":Y:" in line):
-		flag = 0
-		y_counter += 1
+		if flag == 1:
+			outputFile.write(line)
 
-	if flag == 1:
-		outputFile.write(line)
+	print "Total reads: ", n_counter + y_counter
+	print "Discarded reads: ", y_counter
 
-print "Total reads: ", n_counter + y_counter
-print "Discarded reads: ", y_counter
-
-inputFile.close()
-outputFile.close()
+	inputFile.close()
+	outputFile.close()
