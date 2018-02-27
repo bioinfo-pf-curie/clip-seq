@@ -76,8 +76,8 @@ How to use it ?
     -s: Steps of this pipeline:
         trimming: Remove reads which have had problems with the sequencer and remove adapters
         fastqc: Quality control for fastq file
-        mapping: Map and select reads with tophat2 and the mapping quality. On this step we create a sort and index file
-        rm_dup: Remove or only mark the duplicated reads
+        mapping: Map and select reads with tophat2 and the mapping quality.
+        rm_dup: Remove or only mark the duplicated reads. On this step we create a sort and index file
         peak_calling: Detect peaks
         annotation: Annotate genes and peaks
         annot_spe: Annotate peaks with a specific window (last exon, downstream & upstream region of peaks, peaks with downstream region)
